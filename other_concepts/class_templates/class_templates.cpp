@@ -1,3 +1,5 @@
+// Source : https://www.hackerrank.com/challenges/c-class-templates/problem?isFullScreen=false
+
 #include <cmath>
 #include <cstdio>
 #include <vector>
