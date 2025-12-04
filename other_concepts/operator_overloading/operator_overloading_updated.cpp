@@ -10,14 +10,21 @@ using namespace std;
 class Matrix {
 public:
    vector<vector<int>> a;
+
+   // Defaut constructor
+   Matrix() {}
+
+   // Copy constructor
+   Matrix(Matrix& m1) {
+       this->a = m1.a;
+   }
+
    Matrix operator+(Matrix& m1) {
-      Matrix m2; 
+      Matrix m2(m1); 
       for(int i = 0; i < m1.a.size(); i++) {
-         vector<int> intermediate;
          for(int j = 0; j < m1.a[i].size(); j++) {
-            intermediate.push_back(m1.a[i][j] + this->a[i][j]);
+            m2.a[i][j] = m1.a[i][j] + this->a[i][j];
          }
-         m2.a.push_back(intermediate);
       }
 
       return m2;
